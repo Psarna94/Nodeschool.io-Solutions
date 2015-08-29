@@ -1,8 +1,8 @@
 var http = require('http');
 var fs = require('fs');
 
-var server = http.createServer(function(req, res){
-  fs.createReadStream(process.argv[2]).pipe(res);
+var server = http.createServer(function(reqest, response){
+  fs.createReadStream(process.argv[3]).pipe(res);
 });
 
-server.listen(process.argv[3]);
+server.listen(8000);
